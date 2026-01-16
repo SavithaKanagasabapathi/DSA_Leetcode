@@ -1,5 +1,6 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        //TC-O(n) and SC-O(n)
         Map<Integer, Integer> numIndexMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int current = nums[i];
