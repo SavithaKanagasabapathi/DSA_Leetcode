@@ -17,6 +17,12 @@ Given an array of meeting time intervals consisting of start and end times `[[s1
 * **Input:** `[[7, 10], [2, 4]]`
 * **Output:** `1`
 
+<p><strong>Constraints:</strong></p>
+
+<ul>
+	<li><code>1 &lt;=&nbsp;intervals.length &lt;= 10<sup>4</sup></code></li>
+	<li><code>0 &lt;= start<sub>i</sub> &lt; end<sub>i</sub> &lt;= 10<sup>6</sup></code></li>
+</ul>
 ---
 
 ## Strategy: Min-Heap (Dynamic Resource Allocation)
