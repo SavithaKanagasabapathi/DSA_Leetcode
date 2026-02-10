@@ -6,20 +6,24 @@ public class Traversals {
 
     // Simple inner class to represent the Graph
     static class Graph {
-        private final int vertices;
-        private final List<List<Integer>> adj;
+        int vertices;
+        boolean isDirected;
+        List<List<Integer>> adj;
 
-        public Graph(int vertices) {
+        public Graph(int vertices, boolean isDirected) {
             this.vertices = vertices;
+            this.isDirected = isDirected;
             this.adj = new ArrayList<>(vertices);
             for (int i = 0; i < vertices; i++) {
                 adj.add(new ArrayList<>());
             }
         }
 
-        // Add edge (Directed)
         public void addEdge(int source, int destination) {
             adj.get(source).add(destination);
+            if (!isDirected) {
+                adj.get(destination).add(source);
+            }
         }
 
         // --- ITERATIVE BFS QUEUE POLL ---
@@ -94,7 +98,7 @@ public class Traversals {
 
     public static void main(String[] args) {
         // Create a graph with 6 nodes (0 to 5)
-        Graph graph = new Graph(6);
+        Graph graph = new Graph(6, false);
 
         // Define edges
         graph.addEdge(0, 1);
