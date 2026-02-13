@@ -4,6 +4,10 @@ public class Traversals {
     // Time Complexity: O(V + E), where V is vertices and E is edges.
     // Space Complexity: O(V), used by the visited array and the deque.
 
+    //This is for directed graphs
+    //But for Undirected, we need to add if(parent==neighbor){ continue; }
+    //Else it will be considered as Cycle!
+
     // Simple inner class to represent the Graph
     static class Graph {
         int vertices;
